@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     
     // MARK: - Properties
     
-    private var refreshControl: UIRefreshControl?
     var recognizers: [SFSpeechRecognizer] = []
     
     // MARK: - Actions
