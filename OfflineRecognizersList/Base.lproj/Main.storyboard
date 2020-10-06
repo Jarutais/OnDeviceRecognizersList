@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OfflineRecognizersList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HmT-3h-rky">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrq-aD-nmI">
+                                <rect key="frame" x="357" y="64" width="37" height="30"/>
+                                <state key="normal" title="Retry"/>
+                                <connections>
+                                    <action selector="retryTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="s3o-Ci-qam"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="beM-TR-ygn">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="beM-TR-ygn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="6Hd-tS-6pV"/>
+                            <constraint firstItem="HmT-3h-rky" firstAttribute="top" secondItem="mrq-aD-nmI" secondAttribute="bottom" id="8Vm-7A-uf5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mrq-aD-nmI" secondAttribute="trailing" constant="20" id="Hai-TO-aph"/>
+                            <constraint firstItem="HmT-3h-rky" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jxd-qR-TWA"/>
+                            <constraint firstItem="mrq-aD-nmI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="OEi-YJ-iQ8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HmT-3h-rky" secondAttribute="trailing" id="RMq-ws-GK6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HmT-3h-rky" secondAttribute="bottom" id="VK3-ZK-9GM"/>
+                            <constraint firstItem="beM-TR-ygn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Z4j-MV-4et"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="beM-TR-ygn" id="ojB-cG-pFO"/>
+                        <outlet property="retryButton" destination="mrq-aD-nmI" id="at9-we-4FQ"/>
+                        <outlet property="tableView" destination="HmT-3h-rky" id="zeS-8J-ebX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="72"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
