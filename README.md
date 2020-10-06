@@ -1,5 +1,6 @@
 # OnDeviceRecognizersList
-This repo to demonstrates that it isn't possible to list SFSpeechRecognizers with on device transcription capabilities on iOS 14
+This repo to demonstrates that it isn't possible to list SFSpeechRecognizers with on device transcription capabilities on iOS 14.
+
 Fetching SFSpeechRecognizers with on device transcription capabilities is done by:
 1) Creating all available SFSpeechRecognizers
 2) Filtering the ones with property "supportsOnDeviceRecognition" true
